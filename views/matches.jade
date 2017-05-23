@@ -9,11 +9,8 @@ block content5
     This allows users to edit browes potential matches begining with the most likely candtidate.
     The box containes the characteristics of each canditate.
 
-
-
-
   #centerbox5
-    p #{count}
+    p#score #{nextMatch.username} scored a #{count} out of 11 as you best potential match!
     p#nameThemProfile #{nextMatch.username}
     p#ageThemProfile aged #{nextMatch.minAgeMe} to #{nextMatch.maxAgeMe} yrs 
     p#infoThem 
@@ -61,10 +58,6 @@ block content5
       h3 Website guide      
       p.       
         You are presented with your best potential match canditate based on all the data you've entered. Clicking 'next match' will take you to the the second best match and this will continue in descending order. The algorithms in place are based on a count and for every characteristic that a possible match posses and that you desire, the count will increment by one.
-
-
-
-
       p. 
         Additionally every match that you view, you will be bounded by the first form's data input i.e. your gender, their gender, country and city.
 
