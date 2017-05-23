@@ -1,0 +1,303 @@
+extends layout
+
+block content
+
+  script(type="text/javascript").
+    console.log(formValues);
+  button#signInButton(onclick="window.location.href='login'") member sign in
+
+  //
+    Creates a centerbox.
+    This allows users to enter the characteristics they posses about themselves aswell as the characteristics 
+    that they'd like their potential partner to posses.
+  #centerbox2
+    h5#rego  Complete your registration...
+      |          
+      form(name='form2', method='post', action='/register', onsubmit='return verifyPW() && validatepassword()')
+        .signUp
+          // Accumualates data from the previous form.
+          p
+            input#enterName(type='hidden', name='username', value='#{username}')
+            input#genderMe(type='hidden', name='genderMe', value='#{genderMe}')
+            input#genderYou(type='hidden', name='genderYou', value='#{genderYou}')
+            input#country(type='hidden', name='country', value='#{country}')
+            input#city(type='hidden', name='city', value='#{city}')
+            input#postcode.largeBox(name ='postcode', placeholder='postcode', pattern='.{4,}', maxlength='4', required='', type='text')
+            br
+            br
+            |                                     
+            input#pw.largeBox(name='password', placeholder='password', maxlength='8', minlength='8', required='', type='password')
+            br
+            br
+            |                   
+            input#vpw.largeBox(placeholder='verify password', maxlength='8', minlength='8', required='', type='password')
+            br
+            br
+            |                   
+            input#email.largeBox(name='email',placeholder='email', required='', type='email')
+            br
+            br
+        |             
+        .you
+          h5 ...about you
+          br
+          |                height(cm) 
+          input#heightMe.smallBox(name='heightMe', value='150', min='30', type='number')
+          | &#x9;&#x9;
+          |                ethnicity 
+          |                
+          select#ethnicityMe.mediumBox(name='ethnicityMe')
+            option(value='black') black
+            |                   
+            option(value='asian') asian
+            |                   
+            option(value='caucasian') caucasian
+            |                   
+            option(value='latino') latino
+          |                children 
+          |                
+          select#childrenMe.smallBox(name='childrenMe')
+            option(value='yes') yes
+            |                   
+            option(value='no') no
+          |                
+          br
+          br
+          |                body
+          |                
+          select#bodyMe.mediumBox(name='bodyMe')
+            option(value='athletic') athletic
+            |                   
+            option(value='slim') slim
+            |                   
+            option(value='muscular') muscular
+            |                   
+            option(value='large') large
+          |                faith
+          |                
+          select#faithMe.mediumBox(name='faithMe')
+            option(value='none') none
+            |                   
+            option(value='christian') christian
+            |                   
+            option(value='catholic') catholic
+            |                   
+            option(value='muslim') muslim
+            |                   
+            option(value='hindu') hindu
+            |                   
+            option(value='jewish') jewish
+          |                smoker
+          |                
+          select#smokerMe.smallBox(name='smokerMe')
+            option(value='yes') yes
+            |                   
+            option(value='no') no
+          |                
+          br
+          br
+          |                hair
+          |                
+          select#hairMe.mediumBox(name='hairMe')
+            option(value='brown') brown
+            |                   
+            option(value='black') black
+            |                   
+            option(value='blond') blond
+            |                   
+            option(value='red') red
+            |                   
+            option(value='grey') grey
+          |                education
+          |                
+          select#educationMe.mediumBox(name='educationMe')
+            option(value='none') none
+            |                   
+            option(value='high school') high school
+            |                   
+            option(value='university') university
+          |                drinker
+          |                
+          select#drinkerMe.smallBox(name='drinkerMe')
+            option(value='yes') yes
+            |                   
+            option(value='no') no
+            |                   
+            option(value='socially') socially
+          |                
+          br
+          br
+          |                eye colour
+          |                
+          select#eyeMe.mediumBox(name='eyeMe')
+            option(value='brown') brown
+            |                   
+            option(value='green') green
+            |                   
+            option(value='blue') blue
+            |                   
+            option(value='hazel') hazel
+            |                   
+            option(value='grey') grey
+          |                aged 
+          input.smallBox(name='minAgeMe',value='25', min='18', type='number')
+          |                to 
+          input.smallBox(name='maxAgeMe',value='35', min='18', type='number')
+        |             
+        |             
+        .them
+          h5 ...about them
+          br
+          |                height(cm)
+          input#heightYou.smallBox(name='heightYou', value='150', min='30', type='number')
+          label
+          |                ethnicity 
+          |                
+          select#ethnicityYou.mediumBox(name='ethnicityYou')
+            option(value='black') black
+            |                   
+            option(value='asian') asian
+            |                   
+            option(value='caucasian') caucasian
+            |                   
+            option(value='latino') latino
+            |                   
+            option(value="dont care") don&apos;t care
+          |                children 
+          |                
+          select#childrenYou.largeBox(name='childrenYou')
+            option(value='yes') yes
+            |                   
+            option(value='no') no
+            |                   
+            option(value="dont care") don&apos;t care
+          |                
+          br
+          br
+          |                body type
+          |                
+          select#bodyYou(name='bodyYou')
+            option(value='athletic') athletic
+            |                   
+            option(value='slim') slim
+            |                   
+            option(value='muscular') muscular
+            |                   
+            option(value='large') large
+            |                   
+            option(value="dont care") don&apos;t care
+          |                faith
+          |                
+          select#faithYou.mediumBox(name='faithYou')
+            option(value='none') none
+            |                   
+            option(value='christian') christian
+            |                   
+            option(value='catholic') catholic
+            |                   
+            option(value='muslim') muslim
+            |                   
+            option(value='hindu') hindu
+            |                   
+            option(value='jewish') jewish
+            |                   
+            option(value='other') other
+            | &#x9;&#x9;&#x9;&#x9;  
+            option(value="dont care") don&apos;t care
+          |                smoker
+          |                
+          select#smokerYou.largeBox(name='smokerYou')
+            option(value="dont care") don&apos;t care
+            |                   
+            option(value='yes') yes
+            |                   
+            option(value='no') no
+          |                
+          br
+          br
+          |                hair
+          |                
+          select#hairYou.mediumBox(name='hairYou')
+            option(value='brown') brown
+            |                   
+            option(value='black') black
+            |                   
+            option(value='blond') blond
+            |                   
+            option(value='red') red
+            |                   
+            option(value='grey') grey
+            |                   
+            option(value='other') other
+            |                   
+            option(value="dont care") don&apos;t care
+          |                education
+          |                
+          select#educationYou.mediumBox(name='educationYou')
+            option(value='none') none
+            |                   
+            option(value='high school') high school
+            |                   
+            option(value='university') university
+            |                   
+            option(value="dont care") don&apos;t care
+          |                drinker
+          |                
+          select#drinkerYou.largeBox(name='drinkerYou')
+            option(value='yes') yes
+            |                   
+            option(value='no') no
+            |                   
+            option(value='socially') socially
+            |                   
+            option(value="dont care") don&apos;t care
+          |                
+          br
+          br
+          |                eye colour
+          |                
+          select#eyeYou.mediumBox(name='eyeYou')
+            option(value='brown') brown
+            |                   
+            option(value='green') green
+            |                   
+            option(value='blue') blue
+            |                   
+            option(value='hazel') hazel
+            |                   
+            option(value='grey') grey
+            |                   
+            option(value='other') other
+            |                   
+            option(value="dont care") don&apos;t care
+          |                aged 
+          input.smallBox(name='minAgeYou', value='25', min='18', type='number')
+          |                to 
+          input.smallBox(name='maxAgeYou', value='35', min='18', type='number')
+        |          &#x9;
+        input#reset(value='RESET', type='reset')
+        |          &#x9;
+        input#photos(name='finishRegistration', value='Submit and view potential matches', type='submit')
+
+      //  Website info container
+    #container(style='height:450px;left:730px;top:270px;text-shadow:none;')
+        h3 Website guide
+        p. 
+          The entered postcode must correspond to the previously entered city, e.g. Perth's postcode must be between 6000 and 6999.
+        
+        p.
+          The 'password' entered must contain at least one number, one lowercase letter and one uppercase letter and the 'verify password' must be identical to the 'password'.
+        
+        p.
+          Unless all these conditions are met, an error message will be diplayed and you will not proceed to the next screen.
+        
+        p.
+          If the values of your characteristics and your partners characteristics are not entered they will be set to their default values. Submitting the form will either take you to the 'matches' page where you can browes potential matches, starting with your most suitable canditate. Or the the site will take you to your 'profile' page if there are no matches for you.
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+extends layout
+
+block content4
+  button#signInButton(onclick="window.location.href='/'") logout
+
+  //
+    Creates a box.
+    This allows users to view their shortlisted matches contains links to their home pages.         
+          
+  #centerbox7  
+    h3(style='margin-top:-1px;') your shortlist
+    br
+    br
+    form(name='formMatch1', method='get', action='/match')
+      select#matches(name='match', onchange='this.form.submit()', style='position:absolute; margin-bottom:1cm; margin-top:-1.5cm; left:25px;').matchesDropBox 
+        option(label=" ") 
+        each potentialMatch in potentialMatches
+          option(value='#{potentialMatch._id}', selected=user.potentialMatches.username === "nextMatch.username")
+            script.
+              console.log("#{potentialMatch}") 
+            !{potentialMatch.username}
+
+  //
+    Creates a centerbox.
+    This allows users to view information about themselves.    
+  #centerbox4
+    p#nameYouProfile #{user.username}
+    
+    tr(style='font-size: 15pt;')
+      th I am aged #{user.minAgeMe} to #{user.maxAgeMe} years
+      br
+      th I'm a #{user.genderMe}
+      br
+      th Seeking a #{user.genderYou}
+      br
+      th Living in #{user.city},
+      br
+      th #{user.country}
+
+    //  
+      form(name='profileForm'method="post", action='/profile')
+        input#displayImage(type="file", name="displayImage")
+
+    form(name='form4', method='get', action='/matches')
+      div
+        img#profilePicYou(src='../images/profile.png') 
+        |                                           
+        input#browse(value='Browse more matches', type='submit')
+        |          
+      |          
+    button#edit(onclick="window.location.href='edit'") edit profile  
+
+    //  Website info container
+  #container(style='height:360px;')
+      h3 Website guide      
+      p.
+        Your 'profile' page displays only some information about yourself. If you wish to view and/or edit your characteristics that you posses and the characteristics you want your partner to posses, click 'edit profile' and you will be sent to a page containing that paticular data and you can then change as you like. Submiting the editing process sends you back the your profile.
+
+      p.
+        Back on the 'profile' page; The small box next to your main profile box is a shortlist of matches that you have added. By clicking the dropdown you can scroll through them and by clicking one of them you will be sent to their page.
+
+
+
+
+
+
+
+
+
+
+
+
+   

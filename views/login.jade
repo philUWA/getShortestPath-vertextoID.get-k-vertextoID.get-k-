@@ -1,0 +1,28 @@
+extends layout
+
+block content3
+
+  // login form which requires a username and password.      
+  #centerbox3
+    form(name='form3', method='post', action='/login')
+      .signUp
+        input#logInUserName.largeHeightBox(placeholder='username', required='', type='text', name='username')
+        br
+        |                   
+        input#logInPW.largeHeightBox(placeholder='password', maxlength='8', minlength='8', required='', type='password', name='password')
+        br
+      |             
+      input#logButton(value='log in', type='submit')
+      |             
+    a(href='/forgotPassword') 
+      p forgot password    
+ 
+    //  Website info container
+  #container
+      h3 Website guide
+      p.
+        Enter your username and your password and if you have a pre-existing account that match those inputs you will be taken to your 'profile' page. Otherwise if you enter a username or a password that does not exist then a message will be displayed and you will not proceed to the next screen.
+
+      p. 
+        Alternatively if you have forgotten your username or password you can click 'forgot password' link which takes you to a page where you can enter you email address and upon submision: "a link is sent to your email address".  
+    

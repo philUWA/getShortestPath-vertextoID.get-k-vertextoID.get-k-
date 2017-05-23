@@ -1,0 +1,91 @@
+extends layout
+
+block content
+  button#signInButton(onclick="window.location.href='login'") member sign in
+
+  //
+    Create centerbox.
+    This allows users to enter their username as well as their gender and their potential partners gender.
+    Also allows users to enter their country of origin which invokes a second input for city.
+  #centerbox
+      h4 Create your new account...
+      |          
+      form(name='form1', method='post', action='/register')
+        p
+          input#enterName.largeHeightBox(name='username', placeholder='Hi, my first name is?', required='', autofocus='', type='text')
+        |    
+        | I'm a      
+        select#genderMe(name='genderMe')
+          | 
+          option#maleMe(value='male', selected) male
+          |             
+          option#femaleMe(value='female') female
+          |             
+          option#otherMe(value='other') other
+          br
+          br
+        | 
+        | Seeking a         
+        select#genderYou(name='genderYou')
+          | 
+          option#maleMe(value='male') male
+          |             
+          option#femaleMe(value='female', selected) female
+          |             
+          option#otherMe(value='other') other
+          br
+          br
+        br          
+        |          
+        | Living in 
+        select#country(name='country', onchange="populate(this.id,'city')")
+          option(value='Australia') Australia
+          |                
+          option(value='New Zealand') New Zealand
+        |  
+        label(for='country') country
+        |             
+        |             
+        select#city(name='city')
+        |  
+        label(for='city') city
+        |             
+        br
+        br
+        |       
+        |          
+        input#continue(value='Continue', type='submit')
+
+      //  Website info container
+    #container(style='height:505px;')
+        h3 Website guide
+        h4 This guide will continue throughout the website. Just follow the prompts...
+
+        p.
+          The form presented enables you to enter your name, your gender, your potential partners gender, your country and your city.
+          The 'city' and 'country' must be entered otherwise an error message will be displayed and you will not proceed to the next screen.
+        
+        p.  
+          Upon subitting this form, these values will be fixed and the next form which enables you to specify your characteristics
+          aswell as your desired partners characteristics, will then be based on the fixed values of this form.
+
+        p.
+          The 'memeber sign in' button will take you to a page that enables you to enter your username and password if you have an existing account.
+
+        p.
+          The links bellow i.e. 'Facebook' and 'Twitter' will take you to their home pages. Where as the 'Architechture', 'Bios and refs' and 'Testing' will take you to pages explaining the website, as required.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

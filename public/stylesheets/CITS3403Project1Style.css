@@ -1,0 +1,764 @@
+/* Author: Philip Walker
+* Student number: 21570496
+*/
+#headBar{
+position: relative;
+background-image: url("../images/blueTiles.png");
+background-repeat: repeat-x;
+width:1280px;
+height:80px;
+margin-bottom: -7px;
+z-index: 1;
+box-shadow: 0px 15px 20px orange;
+}
+.mainheading {
+position: fixed;
+left: 20px;
+top: -10px;
+width:300px;
+color: white;
+font-family: Arial;
+font-size: 30pt;
+margin-right:1000px;
+z-index: 2;
+text-shadow: 0px 15px 20px rgba(0, 0, 0, 1);
+}
+#signInButton {
+position: absolute;
+top: 7px;
+left: 1020px;
+width: 220px;
+border: 2px solid white;
+border-radius: 15px;
+color: white;
+background-color:rgba(0, 0, 0, 0.001);
+padding: 15px 30px;
+text-align: center;
+display: inline-block;
+font-size: 20px;
+font-family: Arial;
+margin: 4px 2px;
+z-index: 2;
+}
+#signInButton:active {
+background-color: red;
+}
+#signOutButton {
+position: absolute;
+top: 7px;
+left: 1020px;
+width: 220px;
+border: 2px solid white;
+border-radius: 15px;
+color: white;
+background-color:rgba(0, 0, 0, 0.001);
+padding: 15px 30px;
+text-align: center;
+display: inline-block;
+font-size: 20px;
+font-family: Arial;
+margin: 4px 2px;
+z-index: 2;
+}
+#signOutButton:active {
+background-color: red;
+}
+h4 {
+margin-top: 0px;
+margin-bottom: 0px;
+text-align: center;
+}
+#romantic {
+position: relative;
+height: 400px;
+top: 70px;
+width: 600px;
+left: 260px;
+background-image: url("../images/Romantic.png");
+transform: scale(2.4);
+}
+#centerbox {
+position: absolute;
+top: 100px;
+height: 270px;
+left: 375px;
+width: 450px;
+border: 2px solid #008bc0;
+border-radius: 15px 50px;
+padding: 25px;
+background-color: #ff8000;
+color: #0080ff;
+text-shadow: 1px 1px black;
+z-index: 3;
+text-align: center;
+font-family: Arial;
+font-size: 20pt;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 1); 
+}
+#centerbox2 {
+position: absolute;
+top: 100px;
+left: 275px;
+height: 530px;
+width: 650px;
+border: 2px solid #008bc0;
+border-radius: 15px 50px;
+padding: 25px;
+background-color: #FF8000;
+color: #0000ff;
+text-shadow: 1px 1px black;
+z-index: 3;
+text-align: left;
+font-family: Arial;
+font-size: 20pt;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 1); 
+}	
+#centerbox3 {
+position: absolute;
+top: 100px;
+left: 420px;
+height: 170px;
+width: 400px;
+border: 2px solid #008bc0;
+border-radius: 15px 50px;
+padding: 25px;
+background-color: #FF8000;
+color: #0080ff;
+text-shadow: 1px 1px black;
+z-index: 3;
+text-align: center;
+font-family: Arial;
+font-size: 10pt;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 1); 
+}
+#centerbox4 {
+position: absolute;
+top: 100px;
+left: 470px;
+height: 530px;
+width: 280px;
+border: 2px solid #008bc0;
+border-radius: 15px 50px;
+padding: 25px;
+background-color: #FF8000;
+color: #0080ff;
+text-shadow: 1px 1px black;
+z-index: 3;
+text-align: left;
+font-family: Arial;
+font-size: 15pt;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 1); 
+}
+#centerbox5 {
+position: absolute;
+top: 100px;
+left: 370px;
+height: 380px;
+width: 500px;
+border: 2px solid #008bc0;
+border-radius: 15px 50px;
+padding: 25px;
+background-color: #FF8000;
+color: #0080ff;
+text-shadow: 1px 1px black;
+z-index: 3;
+text-align: left;
+font-family: Arial;
+font-size: 20pt;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 1); 
+}
+#centerbox6 {
+position: absolute;
+top: 150px;
+left: 250px;
+height: 390px;
+width: 900px;
+border: 2px solid #008bc0;
+border-radius: 15px 50px;
+padding: 25px;
+background-color: #FF8000;
+color: #0000ff;
+text-shadow: 1px 1px black;
+z-index: 3;
+text-align: left;
+font-family: Arial;
+font-size: 20pt;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 1); 
+}
+#centerbox7 {
+position: absolute;
+top: 100px;
+left: 850px;
+height: 75px;
+width: 167px;
+border: 2px solid #008bc0;
+border-radius: 15px;
+padding: 5px;
+background-color: #FF8000;
+color: #0080ff;
+text-shadow: 1px 1px black;
+z-index: 3;
+text-align: center;
+font-family: Arial;
+font-size: 12pt;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 1); 
+}
+#container {
+position: absolute;
+top: 370px;
+left: 1000px;
+height: 300px;
+width: 250px;
+border: 2px solid black;
+border-radius: 10px;
+padding: 4px;
+background-color: white;
+color: black;
+z-index: 3;
+text-align: justify;
+font-family: Arial;
+font-size: 10pt;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 1); 
+}
+#container > h3 {
+text-align:center;
+}
+#container > h3 + h4 {
+color: red;
+text-align:justify;
+}
+#blackBackDrop {
+position: absolute;
+top: 50px;
+left: 85px;
+height: 160px;
+width: 160px;
+border-radius: 15px;
+background: black;
+color: white;    
+line-height: 50px;
+z-index: 4;
+text-align: center;
+font-family: Arial;
+font-size: 20pt;
+}
+#profilePicYou {
+position: absolute;
+background-image: url("../images/profile.png");
+top: 50px;
+left: 85px;
+height: 160px;
+width: 160px;
+border-radius: 15px;
+color: #beb6a7;
+z-index: 5;
+text-align: center;
+font-family: Arial;
+font-size: 20pt;
+}
+#profilePicThem {
+position: absolute;
+background-image: url("../images/profile.png");
+top: 50px;
+left: 85px;
+height: 160px;
+width: 160px;
+border-radius: 15px;
+color: #beb6a7;
+z-index: 5;
+text-align: center;
+font-family: Arial;
+font-size: 20pt;
+    -webkit-transition: all 0.5s linear;
+       -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+}
+#profilePicThem:hover {
+opacity: 0.5;
+}
+#edit {
+position: absolute;
+top: 475px;
+left: 95px;
+width: 150px
+}
+fieldset {
+height: 37px;
+width: 450px;
+border:0 none;
+}
+#rego {
+position: absolute;
+top: 4%;
+color: #0080ff;
+}	
+label {
+font-size: 15pt;
+color: #0080ff;
+text-shadow: 1px 1px black;
+}
+.smallBox { 
+width: 40px; 
+border-radius: 5px;
+font-weight: bold;
+}
+.mediumBox { 
+width: 70px; 
+border-radius: 5px;
+font-weight: bold;
+}
+.largeBox {
+border-radius: 5px;
+font-weight: bold;
+}
+.largeHeightBox {
+border-radius: 5px;
+font-weight: bold;
+font-size: 20pt;
+}
+.matchesDropBox {
+border-radius: 5px;
+font-weight: bold;
+font-size: 20pt;
+width:125px;
+}
+body {
+padding: 0;
+margin: 0;
+background-color: purple;
+}
+h5 {
+font-size: 20px;
+margin-top: 0px;
+margin-bottom: 0px;
+font-family: Arial;
+}
+/* Do when h5 is a descendent of you.
+*/
+.you h5 {
+text-align: right;
+color: #0080ff;
+text-shadow: 1px 1px black;
+}
+/* Do when h5 is a descendent of them.
+*/
+.them h5 {
+text-align: left;
+color: #0080ff;
+text-shadow: 1px 1px black;
+}
+.youEdit h5 {
+text-align: right;
+color: #0080ff;
+text-shadow: 1px 1px black;
+}
+/* Do when h5 is a descendent of them.
+*/
+.themEdit h5 {
+text-align: left;
+color: #0080ff;
+text-shadow: 1px 1px black;
+}
+/* Do when p is a descendent of signUp.
+*/
+.signUp > p {
+font-size: 15px;
+margin-top: 0.5cm;
+margin-left: 0.8cm;
+}
+.you {
+position: absolute;
+margin-top: -1cm;
+margin-left:5.2cm;
+margin-right: -10cm;
+top: 50px;
+font-size: 20px;
+}
+.youEdit {
+position: absolute;
+color: #0080ff;
+margin-top: -1cm;
+margin-left: 5.5cm;
+margin-right: -1cm;
+top: 50px;
+font-size: 20px;
+}
+.youEditF1 {
+position: absolute;
+top: 180px;
+left: 500px;
+color: #0080ff;
+margin-top: -1cm;
+margin-left: 1cm;
+margin-right: -4cm;
+font-size: 20px;
+}
+.themEdit {
+position: absolute;
+color: #0080ff;
+margin-top: -2.5cm;
+margin-left: 1cm;
+margin-right: -8cm;
+top: 300px;
+font-size: 20px;
+}
+.them {
+position: absolute;
+margin-top: -1.5cm;
+margin-left: 1cm;
+margin-right: -8cm;
+top: 300px;
+font-size: 20px;
+}
+#nameYouProfile {
+margin-top: 5.5cm;
+text-align: center;
+font-size: 25pt;
+}
+#nameThemProfile {
+margin-left: -6cm;
+margin-top: 5.5cm;
+text-align: center;
+font-size: 25pt;
+}
+#ageYouProfile {
+margin-left: -0.5cm;
+margin-top: -0.5cm;
+text-align: center;
+font-size: 20pt;
+}
+#ageThemProfile {
+margin-left: -6cm;
+margin-top: -0.5cm;
+text-align: center;
+font-size: 15pt;
+}
+#infoThem {
+top:190px;
+width: 230px;
+font-size:14pt;
+margin-left: 7cm;
+margin-right: 3cm;
+margin-top: -8cm;
+}
+#nextPotential {
+position: absolute;
+left: 65px;
+top: 350px;
+background-color: #008bc0;
+width: 200px;
+border: 2px solid white;
+border-radius: 15px;
+color: white;
+padding: 15px 30px;
+font-size: 25px;
+font-family: Arial;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 1); 
+text-shadow: 2px 2px black;	
+}
+#nextPotential:hover {
+transform: scale(1.04);
+}
+/* On click button is back to its normal scale and turns red.
+*/
+#nextPotential:active {
+transform: scale(1);
+background-color: red;
+}
+#continue {
+position: absolute;
+left: 50px;
+top: 245px;
+background-color: #008bc0;
+width: 400px;
+border: 2px solid white;
+border-radius: 15px;
+color: white;
+padding: 15px 30px;
+font-size: 25px;
+font-family: Arial;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 1); 
+text-shadow: 2px 2px black;
+}
+/* continue is scale by 1.04 on hover.
+*/
+#continue:hover {
+transform: scale(1.04);
+}
+/* On click button is back to its normal scale and turns red.
+*/
+#continue:active {
+transform: scale(1);
+background-color: red;
+}
+#photos {
+position: absolute;
+left: 25px;
+top: 480px;
+background-color: #008bc0;
+width: 600px;
+border: 2px solid white;
+border-radius: 15px;
+color: white;
+padding: 15px 30px;
+font-size: 25px;
+font-family: Arial;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 1); 
+text-shadow: 2px 2px black;
+}
+/* photos is scale by 1.04 on hover.
+*/
+#photos:hover {
+transform: scale(1.04);
+}
+/* On click button is back to its normal scale and turns red.
+*/
+#photos:active {
+transform: scale(1);
+background-color: red;
+}
+#browse {
+position: absolute;
+left: 20px;
+top: 500px;
+width: 300px;
+background-color: #008bc0;
+border: 2px solid white;
+border-radius: 15px;
+color: white;
+padding: 15px 30px;
+font-size: 25px;
+font-family: Arial;
+text-align: left;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 1); 
+text-shadow: 2px 2px black;
+}
+/* continue is scale by 1.04 on hover.
+*/
+#browse:hover {
+transform: scale(1.04);
+}
+/* On click button is back to its normal scale and turns red.
+*/
+#browse:active {
+transform: scale(1);
+background-color: red;
+}
+#logButton {
+position: absolute;
+left: 60px;
+top: 145px;
+background-color: #008bc0;
+width: 330px;
+border: 2px solid white;
+border-radius: 15px;
+color: white;
+padding: 15px 30px;
+font-size: 25px;
+font-family: Arial;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 1); 
+text-shadow: 2px 2px black;
+}
+/* continue is scale by 1.04 on hover.
+*/
+#logButton:hover {
+transform: scale(1.04);
+}
+/* On click button is back to its normal scale and turns red.
+*/
+#logButton:active {
+transform: scale(1);
+background-color: red;
+}
+/* Resets the form.
+*/
+#reset {
+position: absolute;
+top: 445px;
+left: 430px;
+background-color: red;
+width: 50px;
+height: 20px;
+border: 2px solid white;
+border-radius: 20%;
+color: white;
+line-height: 0px;
+padding: 10px;
+text-align: left;
+font-weight: bold;
+font-size: 8px;
+font-family: Arial;
+}
+/* Reset is highlights yellow on hover.
+*/
+#reset:hover {
+transform: scale(1.04);
+}
+#reset:active {
+transform: scale(1);
+background-color: #008bc0;
+}
+#messageButton {
+position: absolute;
+top: 350px;
+left: 290px;
+background-color: #0000ff;
+width: 120px;
+height: 60px;
+border: 2px solid white;
+border-radius: 15px;
+color: white;
+text-align: center;
+font-weight: bold;
+font-size: 15px;
+font-family: Arial;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 1); 
+text-shadow: 2px 2px black;
+}
+#messageButton:hover {
+transform: scale(1.04);
+}
+#messageButton:active {
+transform: scale(1);
+background-color: #008bc0;
+}
+#chatButton {
+position: absolute;
+top: 350px;
+left: 440px;
+background-color: #008bc0;
+width: 70px;
+height: 60px;
+border: 2px solid white;
+border-radius: 50px;
+color: white;
+text-align: center;
+font-weight: bold;
+font-size: 20px;
+font-family: Arial;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 1); 
+text-shadow: 2px 2px black;
+}
+#chatButton:hover {
+transform: scale(1.04);
+}
+#chatButton:active {
+transform: scale(1);
+background-color: #008bc0;
+}
+/* ------------------------------------- probably won't need anything below this line --------------------------------- */   	
+.references li {
+margin: 10px 0;
+}
+.references {
+position: absolute;
+width: 1200px;
+top: 300px;
+text-indent: 50px;
+color: black;
+font-family: Arial;
+font-size: 16pt;
+}   
+.references ul {
+list-style-type: none;
+}	
+#navigation {
+width: 900px;
+height: 70px;
+margin-left: 1cm;
+margin-top: 10cm;
+margin-bottom: -2cm;
+text-shadow: 1px 1px black;
+}
+#Facebook {
+background-image: url("../images/Facebook.png");
+height: 60px;
+width: 60px;
+border-radius: 15px;
+margin-left:2cm;
+margin-top: -5cm;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 1); 
+transform: scale(1);
+}
+#Facebook:hover {
+opacity: 0.6;
+}
+#Facebook:active {
+transform: scale(0.9);
+}
+#Twitter {
+background-image: url("../images/Twitter.png");
+height: 60px;
+width: 60px;
+z-index: 2;
+border-radius: 15px;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+margin-left: 0.2cm; 
+margin-bottom: 2cm; 
+transform: scale(1);
+}
+#Twitter:hover {
+opacity: 0.6;
+}
+#Twitter:active {
+transform: scale(0.9);
+}
+#footer {
+margin-left: 2cm;
+width: 1200px;
+height: 30px;
+color: white;
+}
+#footer p {
+margin-bottom: -2cm;	
+}
+#aboutUs {
+line-height:26px;
+height:26px;
+width:100px;
+color: yellow;
+text-decoration: none;
+}
+#aboutUs:hover {
+text-decoration: underline;
+}
+/* Link to references.
+*/
+#references {
+line-height:26px;
+height:26px;
+width:100px;
+color: yellow;
+text-decoration: none;
+}
+#references:hover {
+text-decoration: underline;
+}
+#testing {
+line-height:26px;
+height:26px;
+width:100px;
+color: yellow;
+text-decoration: none;
+}
+#testing:hover {
+text-decoration: underline;
+}
+/* when an anchor is a descendent of paragraph, anchor is underlined on hover.
+*/
+p a:hover {
+text-decoration: underline;
+}
+#lineSpace {
+color: purple;
+}
+
+
+
+
+
+
+
+

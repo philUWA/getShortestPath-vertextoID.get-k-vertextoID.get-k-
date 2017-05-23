@@ -1,0 +1,71 @@
+doctype html
+//
+  Author: Philip Walker
+  Student number: 21570496
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    |       
+    title theme
+
+    // Implement CSS and JS code
+
+    link(rel='stylesheet', type='text/css', href='/stylesheets/CITS3403Project1Style.css')      
+    script(type='text/javascript', src='/javascripts/CITS3403Project1Validate.js')      
+    script(type='text/javascript', src='/javascripts/CITS3403Project1Location.js')
+    script(type='text/javascript', src='/javascripts/CITS3403Project1Date.js')
+  |    
+  body
+    // create generic logo headbar
+    #headBar
+    |           
+    header
+      h1.mainheading Dating Event Handlers
+    // Displays a generic back drop image
+    #romantic
+    
+    block content
+    block content2
+    block content3
+    block content4
+    block content5
+    block content6
+    block content7
+    block content8
+    block content9
+    block content10
+    block content11
+    block content12
+    block content13
+
+    //
+      Creates a navigation section.
+      The navigation entitled 'References' is a link to the references and at this stage is the only navigation link that works
+    nav#navigation
+  
+      a#aboutUs(href='/architecture')  
+        p Architecture
+       
+      a#references(href='/references')  
+        p Bios and refs
+
+      a#testing(href='/testing')  
+        p Testing
+
+    // The footer contains an onclick event that will display the last date modified.
+    footer#footer
+      a(href='https://www.facebook.com/')
+        button#Facebook
+      
+      a(href='https://twitter.com/?lang=en')
+        button#Twitter
+
+      p#date(style='margin-bottom:0.5cm')
+        | Click 
+        a(onclick='lastDate()', style='color: cyan;')  here 
+        |  for last date modified
+      |       &#x9;
+      p
+        |  &copy;2017 Dating Event Handlers. 
+        a Terms and Conditions
+        |  of Service Privacy Policy Dating Event Handlers.

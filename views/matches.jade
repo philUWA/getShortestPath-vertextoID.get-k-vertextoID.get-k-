@@ -1,0 +1,84 @@
+extends layout
+
+block content5
+  button#signInButton(onclick="window.location.href='/'") logout
+  button#signInButton(style="left:770px" onclick="window.location.href='profile'") profile
+
+  //
+    Creates a centerbox.
+    This allows users to edit browes potential matches begining with the most likely candtidate.
+    The box containes the characteristics of each canditate.
+
+  #centerbox5
+    p #{count}
+    p#nameThemProfile #{nextMatch.username}
+    p#ageThemProfile aged #{nextMatch.minAgeMe} to #{nextMatch.maxAgeMe} yrs 
+    p#infoThem 
+      | lives in: #{nextMatch.city}, #{nextMatch.country}
+      br
+      | gender: #{nextMatch.genderMe}
+      br
+      | height: #{nextMatch.heightMe}
+      br
+      | ethnicity: #{nextMatch.ethnicityMe}
+      br
+      | children: #{nextMatch.childrenMe}
+      br
+      | body: #{nextMatch.bodyMe}
+      br
+      | faith: #{nextMatch.faithMe}
+      br
+      | smoker: #{nextMatch.smokerMe}
+      br
+      | hair: #{nextMatch.hairMe}
+      br
+      | education: #{nextMatch.educationMe}
+      br
+      | drinker: #{nextMatch.drinkerMe}
+      br
+      | eye colour: #{nextMatch.eyeMe}     
+
+    button#chatButton(onclick="window.location.href='/chat'") chat
+    button#messageButton private messanger
+
+    div
+      #blackBackDrop 
+        p
+        | add to shortlist
+      form(name='formMatch1', method='post', action='/matches')
+        input(type='hidden' name='match' value=nextMatch._id)    
+        input#profilePicThem(type='submit') 
+      form(name='formMatch1', method='get', action='/matches')
+        input(type='hidden', name='offset', value='#{offset}') 
+        input#nextPotential(type='submit', value='next match')
+        |      
+
+    //  Website info container    
+  #container(style='height:530px;')
+      h3 Website guide      
+      p.       
+        You are presented with your best potential match canditate based on all the data you've entered. Clicking 'next match' will take you to the the second best match and this will continue in descending order. The algorithms in place are based on a count and for every characteristic that a possible match posses and that you desire, the count will increment by one.
+
+      p. 
+        Additionally every match that you view, you will be bounded by the first form's data input i.e. your gender, their gender, country and city.
+
+      p. 
+        By moving the cursor over the matches face you will be prompted by the words: 'add to shortlist'. By clicking, the match will be stored in a list and diplayed on your 'profile' page. Once added, the option to delete this person will be presented in the same fasion.
+
+      p.
+        You will also be presented with two buttons in the top left hand corner; 'profile' and 'logout'. 'profile' takes you to your profile page and 'logout' logs out of your account and takes you back to the home screen (the first form you filled out).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

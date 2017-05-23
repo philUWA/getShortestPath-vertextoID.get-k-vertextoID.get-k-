@@ -1,0 +1,296 @@
+extends layout
+
+block content7
+  button#signInButton(onclick="window.location.href='/login'") logout
+
+  //
+    Creates a centerbox.
+    This allows users to edit their previously entered data.
+    The values carried over refer to the values of the user that are parsed from index.js.
+  #centerbox6
+    p
+      form(name='form5', method='post', action='/edit', onsubmit='validateEmail();', style='margin-left:-0.5cm;')
+        .signUp(style='margin-top:-0.5cm;')
+          p
+            input#postcode.largeBox(placeholder='postcode', pattern='.{4,}', maxlength='4', required='', type='text', value='#{user.postcode}')
+            br
+            br
+            |                   
+            input#email.largeBox(placeholder='email', required='', type='email', value='#{user.email}')
+            br
+            br
+        |             
+        .youEdit
+          h5 ...about you
+          |                height 
+          input#heightMe.smallBox(name='heightMe', placeholder='in cm', min='30', type='number', value='#{user.heightMe}')
+          | &#x9;&#x9;
+          |                ethnicity 
+          |                
+          select(name='ethnicityMe')#ethnicityMe.mediumBox
+            option(value='black', selected=user.ethnicityMe === "black") black
+            |                   
+            option(value='asian', selected=user.ethnicityMe === "asian") asian
+            |                   
+            option(value='caucasian', selected=user.ethnicityMe === "caucasian") caucasian
+            |                   
+            option(value='latino', selected=user.ethnicityMe === "latino") latino
+          |                children 
+          |                
+          select(name='childrenMe')#childrenMe.smallBox
+            option(value='yes', selected=user.childrenMe === "yes") yes
+            |                   
+            option(value='no', selected=user.childrenMe === "no") no
+          |                
+          |                body
+          |                
+          select(name='bodyMe')#bodyMe.mediumBox
+            option(value='athletic', selected=user.bodyMe === "athletic") athletic
+            |                   
+            option(value='slim', selected=user.bodyMe === "slim") slim
+            |                   
+            option(value='muscluar', selected=user.bodyMe === "muscluar") muscular
+            |                   
+            option(value='large', selected=user.bodyMe === "large") large
+          |                faith
+          |              
+          select(name='faithMe')#faithMe.mediumBox
+            option(value='none', selected=user.faithMe === "none") none
+            |                   
+            option(value='christian', selected=user.faithMe === "christian") christian
+            |                   
+            option(value='catholic', selected=user.faithMe === "catholic") catholic
+            |                   
+            option(value='muslim', selected=user.faithMe === "muslim") muslim
+            |                   
+            option(value='hindu', selected=user.faithMe === "hindu") hindu
+            |                   
+            option(value='jewish', selected=user.faithMe === "jewish") jewish
+          br
+          br   
+          |                smoker
+          |                 
+          select(name='smokerMe')#smokerMe.smallBox
+            option(value='yes', selected=user.smokerMe === "yes") yes
+            |                   
+            option(value='no', selected=user.smokerMe === "no") no
+          |                
+          |                hair
+          |                
+          select(name='hairMe')#hairMe.mediumBox
+            option(value='brown', selected=user.hairMe === "brown") brown
+            |                   
+            option(value='black', selected=user.hairMe === "black") black
+            |                   
+            option(value='blond', selected=user.hairMe === "blond") blond
+            |                   
+            option(value='red', selected=user.hairMe === "red") red
+            |                   
+            option(value='grey', selected=user.hairMe === "grey") grey
+          |                education
+          |                
+          select(name='educationMe')#educationMe.mediumBox
+            option(value='none', selected=user.educationMe === "none") none
+            |                   
+            option(value='high school', selected=user.educationMe === "high school") high school
+            |                   
+            option(value='university', selected=user.educationMe === "university") university
+          |                drinker
+          |                
+          select(name='drinkerMe')#drinkerMe.smallBox
+            option(value='yes', selected=user.drinkerMe === "yes") yes
+            |                   
+            option(value='no', selected=user.drinkerMe === "no") no
+            |                   
+            option(value='socially', selected=user.drinkerMe === "socially") socially
+          |                
+          |                eye colour
+          |                
+          select(name='eyeMe')#eyeMe.mediumBox
+            option(value='brown', selected=user.eyeMe === "brown") brown
+            |                   
+            option(value='green', selected=user.eyeMe === "green") green
+            |                   
+            option(value='blue', selected=user.eyeMe === "blue") blue
+            |                   
+            option(value='hazel', selected=user.eyeMe === "hazel") hazel
+            |                   
+            option(value='grey', selected=user.eyeMe === "grey") grey
+          br
+          br
+          |                aged 
+          input.smallBox(name='minAgeMe', min='18', placeholder='age', type='number', value='#{user.minAgeMe}')
+          |                to 
+          input.smallBox(name='maxAgeMe', min='18', placeholder='age', type='number', value='#{user.maxAgeMe}')
+        |             
+        |   
+        .youEditF1  
+          select(name='genderMe')#genderMe
+            | 
+            option(value='male', selected=user.genderMe === "male") male
+            |             
+            option(value='female', selected=user.genderMe === "female") female
+            |             
+            option(value='other', selected=user.genderMe === "other") other
+            br
+            br
+          | 
+          | seeking          
+          select(name='genderYou')#genderYou
+            | 
+            option(value='male', selected=user.genderYou === "male") male
+            |             
+            option(value='female', selected=user.genderYou === "female") female
+            |             
+            option(value='other', selected=user.genderYou === "other") other
+              br
+              br
+              |          
+              |    
+            |        
+            |  
+        select#country(name='country', onchange="populate(this.id,'city')", style='margin-left:14cm; margin-top:2cm;')
+          | 
+          option(value='Australia', selected=user.country === "Australia") Australia
+          |                
+          option(value='New Zealand', selected=user.country === "New Zealand") New Zealand
+        |  
+        label(for='country') country
+        |             
+        |             
+        select#city(name='city') 
+        |  
+        label(for='city') city     
+        .themEdit
+          h5 ...about them
+          |                height 
+          input#heightYou.mediumBox(name='heightYou', placeholder="don't care", min='30', type='number', value='#{user.heightYou}')
+          label
+          |                ethnicity 
+          |                
+          select(name='ethnicityYou')#ethnicityYou.largeBox
+            option(value='black', selected=user.ethnicityYou === "black") black
+            |                   
+            option(value='asian', selected=user.ethnicityYou === "asian") asian
+            |                   
+            option(value='caucasian', selected=user.ethnicityYou === "caucasian") caucasian
+            |                   
+            option(value='latino', selected=user.ethnicityYou === "latino") latino
+            |                   
+            option(value="dont care", selected=user.ethnicityYou === "dont care") don&apos;t care
+          |                children 
+          |                
+          select(name='childrenYou')#childrenYou.largeBox
+            option(value='yes', selected=user.childrenYou === "yes") yes
+            |                   
+            option(value='no', selected=user.childrenYou === "no") no
+            |                   
+            option(value="dont care", selected=user.childrenYou === "dont care") don&apos;t care
+          |                
+          br
+          br
+          |                body type
+          |                
+          select(name='bodyYou')#bodyYou
+            option(value='athletic', selected=user.bodyYou === "athletic")  athletic
+            |                   
+            option(value='slim', selected=user.bodyYou === "slim")  slim
+            |                   
+            option(value='muscular', selected=user.bodyYou === "muscular")  muscular
+            |                   
+            option(value='large', selected=user.bodyYou === "large")  large
+            |                   
+            option(value="dont care", selected=user.bodyYou === "dont care")  don&apos;t care
+          |                faith
+          |                
+          select(name='faithYou')#faithYou.mediumBox
+            option(value='none', selected=user.faithYou === "none") none
+            |                   
+            option(value='christian', selected=user.faithYou === "christian") christian
+            |                   
+            option(value='catholic', selected=user.faithYou === "catholic") catholic
+            |                   
+            option(value='muslim', selected=user.faithYou === "muslim") muslim
+            |                   
+            option(value='hindu', selected=user.faithYou === "hindu") hindu
+            |                   
+            option(value='jewish', selected=user.faithYou === "jewish") jewish
+            |                   
+            option(value='other', selected=user.faithYou === "other") other
+            | &#x9;&#x9;&#x9;&#x9;  
+            option(value="dont care", selected=user.faithYou === "dot care") don&apos;t care
+          |                smoker
+          |                
+          select(name='smokerYou')#smokerYou.largeBox
+            option(value="dont care", selected=user.smokerYou === "dont care") don&apos;t care
+            |                   
+            option(value='yes', selected=user.smokerYou === "yes") yes
+            |                   
+            option(value='no', selected=user.smokerYou === "no") no
+          |                
+          br
+          br
+          |                hair
+          |                
+          select(name='hairYou')#hairYou.mediumBox
+            option(value='brown', selected=user.hairYou === "brown") brown
+            |                   
+            option(value='black', selected=user.hairYou === "black") black
+            |                   
+            option(value='blond', selected=user.hairYou === "blond") blond
+            |                   
+            option(value='red', selected=user.hairYou === "red") red
+            |                   
+            option(value='grey', selected=user.hairYou === "grey") grey
+            |                   
+            option(value='other', selected=user.hairYou === "other") other
+            |                   
+            option(value="dont care", selected=user.hairYou === "dont care") don&apos;t care
+          |                education
+          |                
+          select(name='educationYou')#educationYou.mediumBox
+            option(value='none', selected=user.educationYou === "none") none
+            |                   
+            option(value='high school', selected=user.educationYou === "high school") high school
+            |                   
+            option(value='university', selected=user.educationYou === "university") university
+            |                   
+            option(value="dont care", selected=user.educationYou === "dont care") don&apos;t care
+          |                drinker
+          |                
+          select(name='drinkerYou')#drinkerYou.smallBox
+            option(value='yes', selected=user.drinkerYou === "yes") yes
+            |                   
+            option(value='no', selected=user.drinkerYou === "no") no
+            |                   
+            option(value='socially', selected=user.drinkerYou === "socially") socially
+            |                   
+            option(value='dont care', selected=user.drinkerYou === "dont care") dont care
+          |                
+          br
+          br
+          |                eye colour
+          |                
+          select(name='eyeYou')#eyeYou.mediumBox
+            option(value='brown', selected=user.eyeYou === "brown") brown
+            |                   
+            option(value='green', selected=user.eyeYou === "green") green
+            |                   
+            option(value='blue', selected=user.eyeYou === "blue") blue
+            |                   
+            option(value='hazel', selected=user.eyeYou === "hazel") hazel
+            |                   
+            option(value='grey', selected=user.eyeYou === "grey") grey
+            |                   
+            option(value='other', selected=user.eyeYou === "other") other
+            |                   
+            option(value="dont care", selected=user.eyeYou === "dont care") don&apos;t care
+          |                aged 
+          input.smallBox(name='minAgeYou', min='18', placeholder='age', type='number', value='#{user.minAgeYou}')
+          |                to 
+          input.smallBox(name='maxAgeYou', min='18', placeholder='age', type='number', value='#{user.maxAgeYou}')
+        |          &#x9;
+        input#reset(value='RESET', type='reset', style="top:382px; left:410px")
+        |          &#x9;
+        input#photos(value='Save changes', type='submit', style="top:330px;left:520px;width:400px;")
+    

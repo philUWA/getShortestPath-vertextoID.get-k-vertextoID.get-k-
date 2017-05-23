@@ -1,0 +1,102 @@
+h1(style='text-align:center;') The Architechteure
+
+div(style='text-align:justify;')
+  p.
+    The team agreed that we wanted our dating website to have a similar look and feel to some already existing dating websites whilst also satisfying the project specifications. The architechure of the website is as follows:
+
+  br
+  h3 The index page
+  p. 
+    The index page presents a form which enables you to enter your name, your gender, your potential partners gender, your country and your city. The 'city' and 'country' must be entered otherwise an error message will be displayed and you will not proceed to the next screen. 
+
+  p.
+    Upon subitting this form, these values will be fixed and the next form which enables you to specify your characteristics aswell as your desired partners characteristics, will then be based on the fixed values of this form. The 'memeber sign in' button will take you to a page that enables you to enter your username and password if you have an existing account. 
+
+  p.
+    The links at the bottom of the page i.e. 'Facebook' and 'Twitter' will take you to their home pages. Where as the 'Architechture', 'Bios and refs' and 'Testing' will take you to pages explaining the website, as required. Every page throughout the website maintains this consistancy.
+
+  br
+  h3 The register page
+  p. 
+    The register page presents another form which requires you to enter a postcode which must correspond to the previously entered city, e.g. Perth's postcode must be between 6000 and 6999.
+        
+  p.
+    You must also enter a 'password' that must contain at least one number, one lowercase letter and one uppercase letter and the 'verify password' input must be identical to the 'password' input.
+        
+  p.
+    Unless all these conditions are met, an error message will be diplayed and you will not proceed to the next screen.
+        
+  p.
+    The page also diplays a series of checkboxes that allow you to enter the characteristics that you posses, along with the characteristic that you would like you potential partner to posses. If these values are not entered then they will be set to their default values. Based on the data that youv'e entered, submitting the form will either take you to the 'matches' page where you can browse your potential matches starting with your most suitable canditate and ending with your least suitable candidate and then back to the most suitable again. Or the the site will take you to your 'profile' page if there are no matches for you or are the only person on the data base. You cannot view yourself as potential match.
+
+  br
+  h3 The matches page
+  p.
+    The matches page presents you with your best potential match canditate based on all the data you've entered. Clicking 'next match' will take you to the the second best match and this will continue in descending order until your least best match. Click 'next match again and the list will go back to the begining of the list'. The algorithms in place are based on a score system and for every characteristic that a possible match posses and that you desire, the score will increment by one. 
+  
+  p.
+    Additionally every match that you view, you will be bounded by the first form's data input i.e. your gender, their gender, country and city. By moving the cursor over the matches face you will be prompted by the words: 'add to shortlist'. By clicking, the match will be stored in a list and diplayed on your 'profile' page. Once added, the option to delete this person will be presented in the same fasion. 
+
+  p.
+    You will also be presented with two buttons in the top left hand corner; 'profile' and 'logout'. 'profile' takes you to your profile page and 'logout' logs out of your account and takes you back to the index screen.
+
+  br
+  h3 The profile/edit pages
+  p.
+    Your 'profile' page displays only some information about yourself. If you wish to view and/or edit your characteristics that you posses and the characteristics you want your partner to posses, click 'edit profile' and you will be sent to a page containing that paticular data and you can then change as you like. Submiting the editing process sends you back the your profile.
+
+  p.
+    Back on the 'profile' page; The small box next to your main profile box is a shortlist of matches that you have added. By clicking the dropdown you can scroll through them and by clicking one of them you will be sent to their page.
+
+  br
+  h3 The login page
+  p.
+    Enter your username and your password and if you have a pre-existing account that match those inputs you will be taken to your 'profile' page. Otherwise if you enter a username or a password that does not exist then a message will be displayed and you will not proceed to the next screen.
+
+  p. 
+    Alternatively if you have forgotten your username or password you can click 'forgot password' link which takes you to a page where you can enter you email address and upon submision: "a link is sent to your email address". 
+
+  br
+  br
+h1(style='text-align:center;') The Problems
+
+div(style='text-align:justify;')
+  p.
+    The biggest issue that the team faced was the algorithm to compile an array of filtered accounts, taylored for every user and then to have those account sort my most to least relavent. By breaking the process down in to segments over time and assigning each account an 'offset' value we were able to differentiate each one.
+
+  br
+  br
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
